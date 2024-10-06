@@ -15,17 +15,6 @@ window.onscroll = () => {
   }
 };
 
-let accordions = document.querySelectorAll(".accordion-container .accordion");
-
-accordions.forEach((acco) => {
-  acco.onclick = () => {
-    accordions.forEach((subAcco) => {
-      subAcco.classList.remove("active");
-    });
-    acco.classList.add("active");
-  };
-});
-
 var swiper = new Swiper(".review-slider", {
   spaceBetween: 20,
   centeredSlides: true,
