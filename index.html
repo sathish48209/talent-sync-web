@@ -448,7 +448,12 @@
           shortly.
         </p>
 
-        <form id="contact-form">
+        <form
+          id="contact-form"
+          method="POST"
+          data-netlify="true"
+          enctype="multipart/form-data"
+        >
           <div class="form-input">
             <input type="text" id="firstName" placeholder="First Name *" />
             <input type="text" id="lastName" placeholder="Last Name *" />
@@ -468,7 +473,7 @@
             >
           </div>
 
-          <div class="btn" id="submit-btn">Send Message</div>
+          <div class="btn">Send Message</div>
         </form>
       </div>
       <div class="company-contact-details">
