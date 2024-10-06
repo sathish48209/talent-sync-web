@@ -985,6 +985,11 @@ button,
       "message";
     grid-template-columns: 1fr;
   }
+
+  .reach-us-section .form-section .form-input input,
+  .reach-us-section .form-section .form-input textarea {
+    width: 100%;
+  }
   /* REACH US SECTION - END */
 
   /* FOOTER SECTION - START */
@@ -1007,10 +1012,5 @@ button,
 @media (max-width: 400px) {
   .landing-page-section .landing-page-content .image img {
     height: 400px;
-  }
-
-  .reach-us-section .form-section .form-input input,
-  .reach-us-section .form-section .form-input textarea {
-    width: 100%;
   }
 }
