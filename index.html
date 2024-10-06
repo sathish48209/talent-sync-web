@@ -455,19 +455,30 @@
           enctype="multipart/form-data"
         >
           <div class="form-input">
-            <input type="text" id="firstName" placeholder="First Name *" />
-            <input type="text" id="lastName" placeholder="Last Name *" />
-            <input type="text" id="email" placeholder="Email *" />
-            <input type="file" id="file" placeholder="" />
+            <input
+              type="text"
+              id="firstName"
+              placeholder="First Name *"
+              name="firstName"
+            />
+            <input
+              type="text"
+              id="lastName"
+              placeholder="Last Name *"
+              name="lastName"
+            />
+            <input type="email" id="email" placeholder="Email *" name="email" />
+            <input type="file" id="file" placeholder="" name="file" />
             <textarea
               type="text"
               id="message"
               placeholder="Message *"
+              name="message"
             ></textarea>
           </div>
 
           <div class="terms-and-conditions">
-            <input type="checkbox" name="" id="terms_and_conditions" />
+            <input type="checkbox" id="terms_and_conditions" />
             <label for="terms_and_conditions"
               >I agree to terms and policy</label
             >
