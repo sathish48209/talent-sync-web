@@ -34,15 +34,14 @@ html {
 }
 
 .landing-page-section nav .logo-section img {
-  width: 70px;
-  height: 70px;
+  width: 200px;
 }
 
-.landing-page-section nav .logo-section .company-name {
+/* .landing-page-section nav .logo-section .company-name {
   font-size: 1.5rem;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
-}
+} */
 
 .landing-page-section nav .links-section {
   display: flex;
@@ -54,6 +53,10 @@ html {
   font-size: 1rem;
 }
 
+#nav-links a.close {
+  display: none;
+}
+
 .landing-page-section .landing-page-content {
   display: flex;
   align-items: center;
@@ -61,10 +64,6 @@ html {
   gap: 2rem;
   margin-top: 2rem;
   position: relative;
-}
-
-.landing-page-section .landing-page-content {
-  display: flex;
 }
 
 .landing-page-section .landing-page-content .content {
@@ -166,6 +165,20 @@ html {
   font-size: 3.5rem;
   font-weight: 500;
   margin: 0;
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.services-section h2 .scribble-img {
+  position: absolute;
+  left: 30%;
+  bottom: -1rem;
+}
+.services-section h2 .spiral-img {
+  position: absolute;
+  height: 150%;
+  left: 110%;
 }
 
 .services-section p {
@@ -215,10 +228,12 @@ html {
 }
 
 .services-section .explore-us-outer-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   margin-top: 2rem;
-  flex-wrap: wrap;
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
 }
 
 .services-section .explore-us-outer-container .explore-us-container {
@@ -226,16 +241,15 @@ html {
   flex-direction: column;
   padding: 1rem;
   border: 1px solid #e8e8e8;
-  width: 23.5%;
-  margin-bottom: 1.5rem;
+  min-width: 300px;
   background-color: #f3f1ff;
 }
 
 .services-section .explore-us-outer-container .explore-us-container .header {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
-  gap: 0.25rem;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
 }
 
 .services-section
@@ -248,7 +262,7 @@ html {
 }
 
 .services-section .explore-us-outer-container .explore-us-container img {
-  width: 40px;
+  width: 30px;
 }
 
 .services-section .explore-us-outer-container .explore-us-container .content {
@@ -264,6 +278,14 @@ html {
   background-color: #ffffff;
   padding: 0 6rem;
   text-align: center;
+  position: relative;
+}
+
+.about-us-section img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .about-us-section .about-us-content {
@@ -347,11 +369,13 @@ html {
   background-color: #fefefe;
   background-clip: padding-box;
   border: 1px solid rgba(8, 60, 130, 0.07);
+  font-family: "Bai Jamjuree", sans-serif;
 }
 .reach-us-section .form-section .form-input input::placeholder,
 .reach-us-section .form-section .form-input textarea::placeholder {
   color: #959ca9;
   font-weight: 300;
+  font-family: "Bai Jamjuree", sans-serif;
 }
 
 .reach-us-section .form-section .terms-and-conditions {
@@ -431,8 +455,7 @@ html {
   gap: 0.75rem;
 }
 .footer-section-content .company-logo img {
-  width: 50px;
-  height: 50px;
+  width: 200px;
 }
 
 .footer-section-content .company-logo .company-name {
@@ -515,6 +538,7 @@ html {
 /* FOOTER SECTION - END */
 
 /* UTILITY CLASSES */
+button,
 .btn {
   background-color: #7b66ff;
   color: #ffffff;
@@ -524,6 +548,9 @@ html {
   padding: 0.5rem 1rem;
   display: inline-block;
   cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: "Bai Jamjuree", Arial, sans-serif;
 }
 
 .btn.btn-secondary {
@@ -565,6 +592,12 @@ html {
   fill: #bfbee3;
 }
 
+#hamburger {
+  display: none;
+  cursor: pointer;
+  color: #0b2b82;
+  font-size: 2rem;
+}
 /* nav {
   display: flex;
   justify-content: space-between;
@@ -609,19 +642,364 @@ html {
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
-} */
-
-@media (max-width: 768px) {
-  #nav-links {
+}
+*/
+@media (min-width: 551px) and (max-width: 850px) {
+  /* #nav-links {
     display: none;
   }
   #nav-links.active {
     display: flex;
   }
-  #hamburger {
-    display: block;
-  }
   .close {
     display: block;
+  } */
+  /* LANDING PAGE SECTION - START */
+  .landing-page-section {
+    padding: 1rem 2rem 0rem;
   }
+  .landing-page-section nav .logo-section img {
+    width: 175px;
+  }
+  .landing-page-section .landing-page-content {
+    flex-direction: column;
+  }
+  .landing-page-section .landing-page-content {
+    margin-top: 5rem;
+  }
+  .landing-page-section .landing-page-content .content {
+    text-align: center;
+  }
+  .landing-page-section .landing-page-content .content h1 {
+    font-size: 3.75rem;
+  }
+  .landing-page-section .landing-page-content .content p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin: auto;
+  }
+  .landing-page-section .landing-page-content .content .subscribe-section {
+    width: 80%;
+    margin: auto;
+  }
+  .landing-page-section
+    .landing-page-content
+    .content
+    .subscribe-input-section {
+    padding: 0.75rem;
+  }
+
+  .landing-page-section
+    .landing-page-content
+    .content
+    .subscribe-section
+    .subtitle
+    .groove {
+    border-bottom: 40px solid transparent;
+    border-right: 120px solid #0c2e82;
+  }
+  .landing-page-section .landing-page-content .bg-pattern {
+    width: 90%;
+    left: 5%;
+    top: -2%;
+  }
+  .landing-page-section .landing-page-content .image img {
+    height: 550px;
+  }
+  /* LANDING PAGE SECTION - END */
+
+  /* SERVICES SECTION - START */
+  .services-section {
+    padding: 1.5rem 3rem;
+  }
+  .services-section h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .services-section h2 .scribble-img {
+    /* left: 0; */
+    width: 200px;
+    bottom: -0.75rem;
+  }
+  .services-section h2 .spiral-img {
+    display: none;
+  }
+  .services-section p {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
+  .services-section .services-container {
+    flex-direction: column;
+  }
+  .services-section .services-container .service-container {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .services-section .explore-us-outer-container {
+    /* gap: 1rem; */
+  }
+  .services-section .explore-us-outer-container .explore-us-container {
+    width: 48%;
+  }
+  /* SERVICES SECTION - END */
+
+  /* ABOUT US SECTION - START */
+  .about-us-section {
+    padding: 0;
+  }
+  .about-us-section img {
+    display: none;
+  }
+  .about-us-section .about-us-content {
+    padding: 3rem 1rem;
+  }
+  .about-us-section .about-us-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .about-us-section .about-us-content p {
+    line-height: 1.4rem;
+    max-width: 95%;
+  }
+  /* ABOUT US SECTION - END */
+
+  /* REACH US SECTION - START */
+  .reach-us-section {
+    padding: 1rem 2rem;
+    flex-direction: column;
+  }
+  .reach-us-section .form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .reach-us-section .form-section p,
+  .reach-us-section .form-section label {
+    line-height: 1.5rem;
+  }
+  .reach-us-section .form-section .form-input {
+    grid-template-areas:
+      "firstName"
+      "lastName"
+      "email"
+      "file"
+      "message";
+    grid-template-columns: 1fr;
+  }
+  /* REACH US SECTION - END */
+
+  /* FOOTER SECTION - START */
+  .footer-section {
+    padding: 1rem 2rem;
+  }
+  .footer-section-content {
+    flex-direction: column;
+  }
+  .footer-section-content .social-section,
+  .footer-section-content .links-section {
+    width: 100%;
+  }
+  .footer-section-content .links-section {
+    gap: 1rem;
+  }
+  /* FOOTER SECTION - END */
+}
+
+@media (max-width: 550px) {
+  /* LANDING PAGE SECTION - START */
+  .landing-page-section {
+    padding: 1rem 2rem 0rem;
+  }
+  .landing-page-section nav .logo-section img {
+    width: 150px;
+  }
+
+  .landing-page-section nav .links-section {
+    display: none;
+  }
+
+  .landing-page-section .landing-page-content {
+    flex-direction: column;
+  }
+
+  .landing-page-section .landing-page-content {
+    margin-top: 5rem;
+  }
+  .landing-page-section .landing-page-content .content {
+    text-align: center;
+  }
+  .landing-page-section .landing-page-content .content h1 {
+    font-size: 3rem;
+  }
+  .landing-page-section .landing-page-content .content p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    margin: auto;
+  }
+  .landing-page-section
+    .landing-page-content
+    .content
+    .subscribe-input-section {
+    margin-top: 2rem;
+    padding: 0.5rem;
+  }
+  .landing-page-section
+    .landing-page-content
+    .content
+    .subscribe-section
+    .subtitle
+    .groove {
+    border-bottom: 30px solid transparent;
+    border-right: 90px solid #0c2e82;
+  }
+  .landing-page-section
+    .landing-page-content
+    .content
+    .subscribe-section
+    .subtitle
+    .groove
+    + div {
+    font-size: 0.9rem;
+  }
+  .landing-page-section .landing-page-content .bg-pattern {
+    width: 100%;
+    left: 5%;
+    top: -5%;
+  }
+
+  .landing-page-section .landing-page-content .image img {
+    height: 500px;
+  }
+  .landing-page-section nav {
+    position: relative;
+    justify-content: center;
+  }
+  .landing-page-section .sign-in-btn {
+    display: none;
+  }
+  .landing-page-section #hamburger {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+  }
+  #nav-links.active {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    z-index: 15;
+  }
+
+  #nav-links a {
+    font-size: 1.5rem;
+  }
+  #nav-links a.close {
+    display: inline-block;
+  }
+  /* LANDING PAGE SECTION - END */
+
+  /* SERVICES SECTION - START */
+  .services-section {
+    padding: 1rem 2rem;
+  }
+  .services-section h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .services-section h2 .scribble-img {
+    /* left: 0; */
+    width: 150px;
+    bottom: -0.5rem;
+  }
+  .services-section h2 .spiral-img {
+    display: none;
+  }
+  .services-section p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+  .services-section .services-container {
+    flex-direction: column;
+  }
+  .services-section .services-container .service-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .services-section .explore-us-outer-container {
+    flex-direction: column;
+  }
+  .services-section .explore-us-outer-container .explore-us-container {
+    width: 100%;
+  }
+  /* SERVICES SECTION - END */
+
+  /* ABOUT US SECTION - START */
+  .about-us-section {
+    padding: 0;
+  }
+  .about-us-section img {
+    display: none;
+  }
+  .about-us-section .about-us-content {
+    padding: 3rem 1rem;
+  }
+  .about-us-section .about-us-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .about-us-section .about-us-content p {
+    line-height: 1.4rem;
+    max-width: 95%;
+  }
+  /* ABOUT US SECTION - END */
+
+  /* REACH US SECTION - START */
+  .reach-us-section {
+    padding: 1rem 2rem;
+    flex-direction: column;
+  }
+  .reach-us-section .form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .reach-us-section .form-section p,
+  .reach-us-section .form-section label {
+    line-height: 1.5rem;
+  }
+  .reach-us-section .form-section .form-input {
+    grid-template-areas:
+      "firstName"
+      "lastName"
+      "email"
+      "file"
+      "message";
+    grid-template-columns: 1fr;
+  }
+  /* REACH US SECTION - END */
+
+  /* FOOTER SECTION - START */
+  .footer-section {
+    padding: 1rem 2rem;
+  }
+  .footer-section-content {
+    flex-direction: column;
+  }
+  .footer-section-content .social-section,
+  .footer-section-content .links-section {
+    width: 100%;
+  }
+  .footer-section-content .links-section {
+    gap: 1rem;
+  }
+  /* FOOTER SECTION - END */
 }
